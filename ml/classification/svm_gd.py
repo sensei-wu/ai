@@ -29,13 +29,11 @@ for epoch in range(epochs):
             w -= learning_rate * (w - C * y[i] * X[i])
             b -= learning_rate * (-C * y[i])
     
-    # Optional: Print loss every 100 epochs
     if epoch % 100 == 0:
         loss = (1/2) * np.dot(w, w) + C * np.sum(np.maximum(0, 1 - y * (np.dot(X, w) + b)))
         print(f"Epoch {epoch}, Loss: {loss:.4f}")
 
 print(f"Final weights: {w}, Bias: {b}")
 
-# Show the plot with both data points and decision boundary
 plot_svm_boundary(w, b, X, y, title="scikit-learn")
 plt.show()
