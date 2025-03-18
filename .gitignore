@@ -2,3 +2,4 @@
 .DS*
 
 langchain_env/
+__pycache__/
