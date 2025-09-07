@@ -3,3 +3,5 @@
 
 langchain_env/
 __pycache__/
+
+config.json
